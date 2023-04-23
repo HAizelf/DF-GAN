@@ -7,17 +7,12 @@
 ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 # DF-GAN: A Simple and Effective Baseline for Text-to-Image Synthesis (CVPR 2022 Oral)
 
-Official Pytorch implementation for our paper [DF-GAN: A Simple and Effective Baseline for Text-to-Image Synthesis](https://arxiv.org/abs/2008.05865) by [Ming Tao](https://scholar.google.com/citations?user=5GlOlNUAAAAJ), [Hao Tang](https://scholar.google.com/citations?user=9zJkeEMAAAAJ&hl=en), [Fei Wu](https://scholar.google.com/citations?user=tgeCjhEAAAAJ&hl=en), [Xiao-Yuan Jing](https://scholar.google.com/citations?hl=en&user=2IInQAgAAAAJ), [Bing-Kun Bao](https://scholar.google.com/citations?user=lDppvmoAAAAJ&hl=en), [Changsheng Xu](https://scholar.google.com/citations?user=hI9NRDkAAAAJ). 
+Unofficial pytorch implementation of paper [DF-GAN: A Simple and Effective Baseline for Text-to-Image Synthesis](https://arxiv.org/abs/2008.05865) by [Ming Tao](https://scholar.google.com/citations?user=5GlOlNUAAAAJ), [Hao Tang](https://scholar.google.com/citations?user=9zJkeEMAAAAJ&hl=en), [Fei Wu](https://scholar.google.com/citations?user=tgeCjhEAAAAJ&hl=en), [Xiao-Yuan Jing](https://scholar.google.com/citations?hl=en&user=2IInQAgAAAAJ), [Bing-Kun Bao](https://scholar.google.com/citations?user=lDppvmoAAAAJ&hl=en), [Changsheng Xu](https://scholar.google.com/citations?user=hI9NRDkAAAAJ). 
 
 <img src="framework.png" width="804px" height="380px"/>
 
 ---
-## News!
-[CVPR2023]Our new simple and effective model GALIP ([paper link](https://arxiv.org/abs/2301.12959), [code link](https://github.com/tobran/GALIP)) achieves comparable results to Large Pretrained Diffusion Models! Furthermore, our GALIP is training-efficient which only requires 3% training data, 6% learnable parameters. **Our GALIP achieves ~120 x faster synthesis speed and can be inferred on CPU**. 
 
-GALIP significantly lowers the hardware threshold for training and inference. We hope that more users can find the interesting of AIGC.
-
----
 ## Requirements
 - python 3.8
 - Pytorch 1.9
@@ -26,7 +21,7 @@ GALIP significantly lowers the hardware threshold for training and inference. We
 
 Clone this repo.
 ```
-git clone https://github.com/tobran/DF-GAN
+git clone https://github.com/HAizelf/DF-GAN
 pip install -r requirements.txt
 cd DF-GAN/code/
 ```
@@ -78,7 +73,6 @@ The released model achieves better performance than the CVPR paper version.
 
 | Model | CUB-FID↓ | COCO-FID↓ |NOP↓ |
 | --- | --- | --- | --- |
-| DF-GAN(paper) | 14.81 | 19.32 | 19M |
 | DF-GAN(pretrained model) | **12.10** | **15.41** | **18M** |
 
 
@@ -100,24 +94,3 @@ The synthesized images are saved at ./code/samples.
 
 <img src="selected_samples.jpg" width="804px" height="306px"/>
 
----
-### Citing DF-GAN
-
-If you find DF-GAN useful in your research, please consider citing our paper:
-
-```
-@inproceedings{tao2022df,
-  title={DF-GAN: A Simple and Effective Baseline for Text-to-Image Synthesis},
-  author={Tao, Ming and Tang, Hao and Wu, Fei and Jing, Xiao-Yuan and Bao, Bing-Kun and Xu, Changsheng},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={16515--16525},
-  year={2022}
-}
-```
-The code is released for academic research use only. For commercial use, please contact [Ming Tao](mingtao2000@126.com).
-
-**Reference**
-
-- [StackGAN++: Realistic Image Synthesis with Stacked Generative Adversarial Networks](https://arxiv.org/abs/1710.10916) [[code]](https://github.com/hanzhanggit/StackGAN-v2)
-- [AttnGAN: Fine-Grained Text to Image Generation with Attentional Generative Adversarial Networks](https://openaccess.thecvf.com/content_cvpr_2018/papers/Xu_AttnGAN_Fine-Grained_Text_CVPR_2018_paper.pdf) [[code]](https://github.com/taoxugit/AttnGAN)
-- [DM-GAN: Realistic Image Synthesis with Stacked Generative Adversarial Networks](https://arxiv.org/abs/1904.01310) [[code]](https://github.com/MinfengZhu/DM-GAN)
